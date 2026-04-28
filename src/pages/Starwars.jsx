@@ -43,13 +43,25 @@ export const Starwars = () => {
                         <CardPeople key={index} people={value} />
                     )
                 })}
-
             </div>
 
             <h3>Planets</h3>
-            {/* <componente_carta_planets/> */}
+            <div className= "d-flex" style={{overflow: "auto"}}>
+                {store.character?.map((value, index) => {
+                    return (
+                        <CardPeople key={index} people={value} />
+                    )
+                })}
+            </div>
+            
             <h3>Vehicles</h3>
-            {/* <componente_carta_vehicles/> */}
+            <div className= "d-flex" style={{overflow: "auto"}}>
+                {store.character?.map((value, index) => {
+                    return (
+                        <CardPeople key={index} people={value} />
+                    )
+                })}
+            </div>
 
 
             <Link to="/">
