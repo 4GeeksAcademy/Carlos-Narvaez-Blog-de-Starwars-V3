@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const CardPlanets = ({people}) => {
+export const CardPeople = ({people}) => {
 
     return (
         <nav className="navbar navbar-light bg-light">
