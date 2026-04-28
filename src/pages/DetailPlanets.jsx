@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-export const DetailPeople = () => {
+export const DetailPlanets = () => {
     const { uid } = useParams();
     const [details, setDetails] = useState(null);
 
@@ -22,18 +22,18 @@ export const DetailPeople = () => {
                         src={`https://githubusercontent.com{uid}.jpg`} 
                         className="img-fluid" 
                         alt={details.name} 
+                        onError={(e) => e.target.src = "https://starwars-visualguide.com"}
                     />
                 </div>
                 <div className="col-md-6">
                     <h1>{details.name}</h1>
-                    <p>A person within the Star Wars universe.</p>
-                    <div className="row text-danger border-top pt-3">
-                        <div className="col-4"><strong>Height</strong><br/>{details.height}</div>
-                        <div className="col-4"><strong>Mass</strong><br/>{details.mass}</div>
-                        <div className="col-4"><strong>Hair Color</strong><br/>{details.hair_color}</div>
-                        <div className="col-4 mt-3"><strong>Skin Color</strong><br/>{details.skin_color}</div>
-                        <div className="col-4 mt-3"><strong>Eye Color</strong><br/>{details.eye_color}</div>
-                        <div className="col-4 mt-3"><strong>Birth Year</strong><br/>{details.birth_year}</div>
+                    <div className="row text-danger border-top pt-3 mt-3">
+                        <div className="col-4"><strong>Climate</strong><br/>{details.climate}</div>
+                        <div className="col-4"><strong>Population</strong><br/>{details.population}</div>
+                        <div className="col-4"><strong>Terrain</strong><br/>{details.terrain}</div>
+                        <div className="col-4 mt-3"><strong>Diameter</strong><br/>{details.diameter}</div>
+                        <div className="col-4 mt-3"><strong>Gravity</strong><br/>{details.gravity}</div>
+                        <div className="col-4 mt-3"><strong>Orbital Period</strong><br/>{details.orbital_period}</div>
                     </div>
                 </div>
             </div>

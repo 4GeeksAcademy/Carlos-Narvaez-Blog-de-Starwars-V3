@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
-export const DetailPeople = () => {
+export const DetailVehicles = () => {
     const { uid } = useParams();
     const [details, setDetails] = useState(null);
 
@@ -26,14 +26,13 @@ export const DetailPeople = () => {
                 </div>
                 <div className="col-md-6">
                     <h1>{details.name}</h1>
-                    <p>A person within the Star Wars universe.</p>
-                    <div className="row text-danger border-top pt-3">
-                        <div className="col-4"><strong>Height</strong><br/>{details.height}</div>
-                        <div className="col-4"><strong>Mass</strong><br/>{details.mass}</div>
-                        <div className="col-4"><strong>Hair Color</strong><br/>{details.hair_color}</div>
-                        <div className="col-4 mt-3"><strong>Skin Color</strong><br/>{details.skin_color}</div>
-                        <div className="col-4 mt-3"><strong>Eye Color</strong><br/>{details.eye_color}</div>
-                        <div className="col-4 mt-3"><strong>Birth Year</strong><br/>{details.birth_year}</div>
+                    <div className="row text-danger border-top pt-3 mt-3">
+                        <div className="col-4"><strong>Model</strong><br/>{details.model}</div>
+                        <div className="col-4"><strong>Vehicle Class</strong><br/>{details.vehicle_class}</div>
+                        <div className="col-4"><strong>Manufacturer</strong><br/>{details.manufacturer}</div>
+                        <div className="col-4 mt-3"><strong>Cost</strong><br/>{details.cost_in_credits}</div>
+                        <div className="col-4 mt-3"><strong>Passengers</strong><br/>{details.passengers}</div>
+                        <div className="col-4 mt-3"><strong>Length</strong><br/>{details.length}</div>
                     </div>
                 </div>
             </div>
